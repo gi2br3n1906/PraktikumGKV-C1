@@ -1,0 +1,10 @@
+Kode itu berjalan dengan beberapa fungsi
+1. fungsi void init untuk menginisiasikan background dan mengaktifkan depth
+2. fungsi drawCubeWithBorder untuk menambahkan border pada masing masing bagian tangan
+3. fungsi display untuk menginisiasikan bentuk tangan yang akan ditampilkan
+4. fungsi reshape untuk menginisiasikan perspektif kamera yang akan digunakan untuk menampilkan gambar
+5. fungsi update digunakan untuk mengubah status posisi bagan bagian berdasarkan input keyboard yang dimasukkan
+6. fungsi keydown untuk mengecek apakah tombol diklik
+7. fungsi keyup unntuk mengubah status keystates ketika tombol dilepas
+8. fungsi timer untuk inisiasi berapa lama frame dieksekusi
+9. main program untuk menjalankan seluruh fungsi dan disusun supaya berjalan sesuai yang diharapkan
