@@ -8,3 +8,4 @@ Kode itu berjalan dengan beberapa fungsi
 7. fungsi keyup unntuk mengubah status keystates ketika tombol dilepas
 8. fungsi timer untuk inisiasi berapa lama frame dieksekusi
 9. main program untuk menjalankan seluruh fungsi dan disusun supaya berjalan sesuai yang diharapkan
+
