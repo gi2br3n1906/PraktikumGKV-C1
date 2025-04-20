@@ -1,0 +1,49 @@
+# Project: tubes
+# Makefile created by Dev-C++ 5.7.1
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = camera.o collision.o input.o lighting.o main.o menu.o render.o object.o
+LINKOBJ  = camera.o collision.o input.o lighting.o main.o menu.o render.o object.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/mingw32/lib" -static-libstdc++ -static-libgcc -mwindows -lglut32 -lglu32 -lopengl32 -lwinmm -lgdi32 -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include/c++"
+BIN      = tubes.exe
+CXXFLAGS = $(CXXINCS) -g3 -std=gnu++11
+CFLAGS   = $(INCS) -g3 -std=gnu++11 -DGLUT_STATIC
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+camera.o: camera.cpp
+	$(CPP) -c camera.cpp -o camera.o $(CXXFLAGS)
+
+collision.o: collision.cpp
+	$(CPP) -c collision.cpp -o collision.o $(CXXFLAGS)
+
+input.o: input.cpp
+	$(CPP) -c input.cpp -o input.o $(CXXFLAGS)
+
+lighting.o: lighting.cpp
+	$(CPP) -c lighting.cpp -o lighting.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+menu.o: menu.cpp
+	$(CPP) -c menu.cpp -o menu.o $(CXXFLAGS)
+
+render.o: render.cpp
+	$(CPP) -c render.cpp -o render.o $(CXXFLAGS)
+
+object.o: object.cpp
+	$(CPP) -c object.cpp -o object.o $(CXXFLAGS)
